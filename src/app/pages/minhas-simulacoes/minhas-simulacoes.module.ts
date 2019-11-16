@@ -2,7 +2,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatSidenavModule, MatMenuModule } from '@angular/material';
+import {
+  MatFormFieldModule,
+  MatSidenavModule,
+  MatMenuModule
+} from '@angular/material';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -21,11 +25,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MinhasSimulacoesRoutingModule } from './minhas-simulacoes-routing.module';
 import { MinhasSimulacoesComponent } from './minhas-simulacoes.component';
-
-
+import { DetalhesDialogComponent } from './dialog/detalhes-dialog';
 
 @NgModule({
-  declarations: [MinhasSimulacoesComponent],
+  declarations: [MinhasSimulacoesComponent, DetalhesDialogComponent],
+  entryComponents: [DetalhesDialogComponent],
   imports: [
     CommonModule,
     MinhasSimulacoesRoutingModule,
@@ -54,27 +58,27 @@ import { MinhasSimulacoesComponent } from './minhas-simulacoes.component';
     HttpClientModule
   ],
   exports: [
-     MatButtonModule,
-     MatMenuModule,
-     MatToolbarModule,
-     MatIconModule,
-     MatSidenavModule,
-     MatBadgeModule,
-     MatListModule,
-     MatGridListModule,
-     MatInputModule,
-     MatFormFieldModule,
-     MatSelectModule,
-     MatRadioModule,
-     MatDatepickerModule,
-     MatChipsModule,
-     MatTooltipModule,
-     MatTableModule,
-     MatPaginatorModule,
-     MatCardModule,
-     FormsModule,
-     ReactiveFormsModule,
-     HttpClientModule
-  ],
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatBadgeModule,
+    MatListModule,
+    MatGridListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatChipsModule,
+    MatTooltipModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ]
 })
-export class MinhasSimulacoesModule { }
+export class MinhasSimulacoesModule {}

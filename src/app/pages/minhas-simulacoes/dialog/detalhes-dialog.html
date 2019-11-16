@@ -1,0 +1,21 @@
+<div mat-dialog-content class="container">
+  <h2 mat-dialog-title>Parcelas</h2>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let parcela of compra.parcelas">
+      {{parcela?.numero}}ª parcela no dia {{ parcela?.dataVencimento | date:
+      "dd/MM/yyyy" }} no valor de {{ parcela?.valorJurosSimples | currency:
+      'BRL'}}.
+      <hr />
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions style="text-align: center;">
+  <button
+    type="button"
+    mat-raised-button
+    color="primary"
+    (click)="fechar()"
+  >
+    Fechar
+  </button>
+</div>

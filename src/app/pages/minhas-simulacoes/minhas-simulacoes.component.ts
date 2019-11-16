@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
-import { CompraDTO } from '../../entities/compraDTO';
-import { MinhasSimulacoesService } from './minhas-simulacoes.service';
+import { MatDialog } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
+import { CompraDTO } from '../../entities/compraDTO';
+import { DetalhesDialogComponent } from './dialog/detalhes-dialog';
 
 @Component({
   selector: 'app-minhas-simulacoes',
@@ -16,6 +15,7 @@ export class MinhasSimulacoesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -25,8 +25,9 @@ export class MinhasSimulacoesComponent implements OnInit {
     });
   }
 
-  public buscarDetalhes(item) {
-    console.log(item);
-
+  public abrirDialog(simulacao: CompraDTO) {
+    this.dialog.open(DetalhesDialogComponent, {
+      data: {simulacao}
+    });
   }
 }
