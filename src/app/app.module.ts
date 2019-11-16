@@ -1,11 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MinhasSimulacoesModule } from './pages/minhas-simulacoes/minhas-simulacoes.module';
 import { SimularCompraModule } from './pages/simular-compra/simular-compra.module';
-import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ToastrModule } from 'ngx-toastr';
       preventDuplicates: true,
     }),
 
-    SimularCompraModule
+    SimularCompraModule,
+    MinhasSimulacoesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
