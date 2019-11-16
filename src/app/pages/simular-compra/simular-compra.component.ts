@@ -41,6 +41,8 @@ export class SimularCompraComponent implements OnInit {
           this.msg.error('Algo não saiu como esperado. Por favor, tente novamente.', 'Erro!');
         }
       });
+    } else {
+      this.msg.warning('Por favor, preencha todo o formulário', 'Atenção!');
     }
   }
 
@@ -51,6 +53,8 @@ export class SimularCompraComponent implements OnInit {
       this.service.simular(compra).subscribe((resp: CompraDTO) => {
         this.compraSimulada = resp;
       });
+    } else {
+      this.msg.warning('Por favor, preencha todo o formulário', 'Atenção!');
     }
   }
 
