@@ -22,6 +22,6 @@ export class SimularCompraService {
       .append('juros', compra.juros.toString())
       .append('quantidadeParcela', compra.quantidadeParcela.toString())
       .append('data', compra.data.toISOString())
-    })
+    });
   }
 }
